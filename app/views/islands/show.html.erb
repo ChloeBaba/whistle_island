@@ -11,9 +11,9 @@
 <p><%= @island.price  %></p>
 <p><%= @island.availability  %></p>
 
-<%= link_to "Back to the list", root_path %>
+<%= link_to "Back to the list", islands_path %>
 
-<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail[:id]), class: 'btn btn-primary' %>
+<%= link_to "Edit an island", edit_island_path(island) %>
 
 </div>
 
