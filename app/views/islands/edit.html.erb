@@ -1,3 +1,7 @@
 <div>
-  <%= render "form", flat: @flat %>
+  <%= simple_form_for @island do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :availability %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
 </div>
