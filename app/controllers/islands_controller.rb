@@ -9,7 +9,7 @@ class IslandsController < ApplicationController
     redirect_to island_path(@island)
   end
 
-private
+  private
 
   def set_island
     @island = Island.find(params[:id])
