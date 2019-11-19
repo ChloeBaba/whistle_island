@@ -1,0 +1,19 @@
+<div class="container">
+
+<!-- ADD CARROUSEL
+ -->
+
+<h1> <%= @island.name  %> </h1>
+
+<h3>Island Description :</h3>
+
+<p><%= @island.description  %></p>
+<p><%= @island.price  %></p>
+<p><%= @island.availability  %></p>
+
+<%= link_to "Back to the list", islands_path %>
+
+<%#= link_to "Edit an island", edit_island_path(island) %>
+
+</div>
+
