@@ -1,4 +1,8 @@
 class IslandsController < ApplicationController
+  def show
+    set_island
+  end
+
   def edit
     set_island
   end
