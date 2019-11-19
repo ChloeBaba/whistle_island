@@ -2,5 +2,8 @@
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.submit "Save Island", class: "btn btn-primary" %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
 <% end %>
  <h2><%= link_to "back to main page", islands_path %></h2>
+
