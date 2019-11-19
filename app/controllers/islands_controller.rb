@@ -10,12 +10,14 @@ class IslandsController < ApplicationController
 
   def edit
     set_island
+    authorize @island
   end
 
   def update
     set_island
     @island.update(island_params)
     redirect_to island_path(@island)
+    authorize @island
   end
 
   private
