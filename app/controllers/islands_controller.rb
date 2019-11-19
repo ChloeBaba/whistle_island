@@ -1,4 +1,9 @@
 class IslandsController < ApplicationController
+  def show
+    set_island
+    authorize @island
+  end
+
   def index
     @islands = policy_scope(Island)
   end
@@ -13,7 +18,7 @@ class IslandsController < ApplicationController
     redirect_to island_path(@island)
   end
 
-private
+  private
 
   def set_island
     @island = Island.find(params[:id])
