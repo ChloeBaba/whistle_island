@@ -20,6 +20,13 @@ class IslandsController < ApplicationController
     authorize @island
   end
 
+  def destroy
+    set_island
+    @island.destroy
+    redirect_to islands_path
+    authorize @island
+  end
+
   private
 
   def set_island
