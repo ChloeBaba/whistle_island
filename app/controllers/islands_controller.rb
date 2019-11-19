@@ -15,7 +15,7 @@ class IslandsController < ApplicationController
 
   def new
     @island = Island.new
-    # authorize @island
+    authorize @island
   end
 
   def create
@@ -25,7 +25,7 @@ class IslandsController < ApplicationController
     else
       render :new
     end
-  #   authorize @island
+    authorize @island
   end
 end
 
