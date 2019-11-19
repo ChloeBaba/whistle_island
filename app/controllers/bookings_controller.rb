@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
   end
 
   def new
-    set_booking
+    @island = Island.find(params[:island_id])
     @booking = Booking.new
     authorize @booking
   end
@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.island = Island.find(params[:island_id])
     @booking.user = current_user
     if @booking.save
-      redirect_to island_bookings_path(@booking.island), notice: 'Booking request was successfully sent.'
+      redirect_to island_booking_path(@booking.island, @booking), notice: 'Booking request was successfully sent.'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class BookingsController < ApplicationController
   private
 
   def set_booking
-    @booking = Island.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def booking_params
