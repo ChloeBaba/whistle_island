@@ -1,7 +1,7 @@
 class IslandsController < ApplicationController
-
   def show
     set_island
+    authorize @island
   end
 
   def index
