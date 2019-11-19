@@ -30,7 +30,10 @@
 <p><%= @island.price  %></p>
 <p><%= @island.availability  %></p>
 
-<%= link_to "Back to the list - ", islands_path %>
+
+<%= link_to "Back to the list", islands_path %>
+
+<%#= link_to "Edit an island", edit_island_path(island) %>
 
 <%= link_to "Edit -", edit_island_path(@island) %>
 <%= link_to "Delete 🗑", island_path(@island), method: :delete,
