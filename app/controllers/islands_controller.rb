@@ -23,7 +23,7 @@ class IslandsController < ApplicationController
   def destroy
     set_island
     @island.destroy
-    redirect_to islands_path, notice: 'Island was successfully deleted.'
+    redirect_to islands_path
     authorize @island
   end
 

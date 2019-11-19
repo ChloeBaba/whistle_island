@@ -1,9 +1,9 @@
 require 'date'
 
 puts 'Cleaning database...'
-User.destroy_all
-Island.destroy_all
 Booking.destroy_all
+Island.destroy_all
+User.destroy_all
 
 puts 'Creating users...'
 user_1 = User.create!(email: "user_1@example.com", password: "123456")
