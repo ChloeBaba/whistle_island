@@ -33,6 +33,7 @@ class IslandsController < ApplicationController
     else
       render :new
     end
+    authorize @island
   end
 
   def destroy
