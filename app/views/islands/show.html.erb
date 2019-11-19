@@ -24,7 +24,7 @@
 
 <h1> <%= @island.name  %> </h1>
 
-<h3>Island Description :</h3>
+<h3>Description :</h3>
 
 <p><%= @island.description  %></p>
 <p><%= @island.price  %></p>
@@ -32,8 +32,8 @@
 
 <%= link_to "Back to the list - ", islands_path %>
 
-<%= link_to "Edit your Island -", edit_island_path(@island) %>
-<%= link_to "Delete your Island 🗑", island_path(@island), method: :delete,
+<%= link_to "Edit -", edit_island_path(@island) %>
+<%= link_to "Delete 🗑", island_path(@island), method: :delete,
       data: { confirm: "Are you sure?" } %>
 </div>
 

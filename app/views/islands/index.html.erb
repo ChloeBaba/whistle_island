@@ -1,6 +1,6 @@
-<h1>amazing islands</h1>
+<h1>Whistle Islands</h1>
 <% @islands.each do |island| %>
-  <h3>Island name: <%= link_to island.name, island_path(island) %></h3>
-  <p>Island desc: <%= island.description %></p>
-  <p>Island-Ower: <%= island.user.email %></p>
+  <h3>Name: <%= link_to island.name, island_path(island) %></h3>
+  <p>Description: <%= island.description %></p>
+  <p>Owner: <%= island.user.email %></p>
 <% end %>
