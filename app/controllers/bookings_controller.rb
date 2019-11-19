@@ -1,11 +1,15 @@
 class BookingsController < ApplicationController
-
   def index
     @bookings = policy_scope(Booking)
   end
 
+  def show
+    set_booking
+    authorize @booking
+  end
+
   def new
-    @island = Island.find(params[:island_id])
+    set_booking
     @booking = Booking.new
     authorize @booking
   end
@@ -20,6 +24,12 @@ class BookingsController < ApplicationController
       render :new
     end
     authorize @booking
+  end
+
+  private
+
+  def set_booking
+    @booking = Island.find(params[:id])
   end
 
   def booking_params
