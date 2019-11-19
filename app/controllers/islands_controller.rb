@@ -33,6 +33,12 @@ class IslandsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    set_island
+    @island.destroy
+    redirect_to islands_path
     authorize @island
   end
 
