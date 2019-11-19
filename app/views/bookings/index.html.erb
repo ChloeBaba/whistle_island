@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Here is the list of your bookings:</h1>
+
+  <% @bookings.each do |booking| %>
+    <h3><%= link_to booking.island.name, island_path(booking.island) %></h3>
+    <h5><%= booking.island.description %></h5>
+    <p>Arrival: <%= booking.start_date %></p>
+    <p>Departure: <%= booking.end_date %></p>
+    <p>Price: <%= booking.total_price %></p>
+  <% end %>
+</div>
