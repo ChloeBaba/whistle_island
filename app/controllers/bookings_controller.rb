@@ -9,4 +9,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     authorize @booking
   end
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date)
+  end
 end
