@@ -1,6 +1,6 @@
 class IslandsController < ApplicationController
   def index
-    @islands = Island.all
+    @islands = policy_scope(Island)
   end
 
   def edit

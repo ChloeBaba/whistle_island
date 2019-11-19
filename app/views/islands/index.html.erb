@@ -2,5 +2,5 @@
 <% @islands.each do |island| %>
   <h3>Island name: <%= island.name %></h3>
   <p>Island desc: <%= island.description %></p>
-  <p>Owner: <%= island.user %></p>
+  <p>Owner: <%= island.user.email %></p>
 <% end %>
