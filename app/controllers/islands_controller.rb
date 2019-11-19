@@ -1,4 +1,8 @@
 class IslandsController < ApplicationController
+  def index
+    @islands = Island.all
+  end
+
   def edit
     set_island
   end
