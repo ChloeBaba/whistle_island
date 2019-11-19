@@ -1,6 +1,34 @@
-<h1>Whistle Islands</h1>
-<% @islands.each do |island| %>
-  <h3>Name: <%= link_to island.name, island_path(island) %></h3>
-  <p>Description: <%= island.description %></p>
-  <p>Owner: <%= island.user.email %></p>
-<% end %>
+<h1 class="d-flex justify-content-center">Whistle Islands</h1>
+<div class="container">
+  <div class="row">
+    <% @islands.each do |island| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card" style="background-image: white;">
+          <div class="card-description">
+            <h3>Name: <%= link_to island.name, island_path(island) %></h3>
+          </div>
+          <p><b>Description</b> <%= island.description %></p>
+          <p><b>Owner</b> <%= island.user.email %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <% @islands.each do |island| %>
+      <div class="col-md-4">
+        <img src="..." class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Name: <%= link_to island.name, island_path(island) %></h5>
+          <p class="card-text"><b>Description</b> <%= island.description %></p>
+          <p class="card-text"><b>Owner</b> <%= island.user.email %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div> -->
+
