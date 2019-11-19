@@ -1,0 +1,10 @@
+<h1>Here is the list of your bookings:</h1>
+
+<!-- island name and island description -->
+
+<% @bookings.each do |booking| %>
+  <p>Arrival: <%= booking.start_date %></p>
+  <p>Departure: <%= booking.end_date %></p>
+  <p>Price: <%= booking.total_price %></p>
+<% end %>
+

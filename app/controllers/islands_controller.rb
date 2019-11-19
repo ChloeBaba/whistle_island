@@ -1,11 +1,11 @@
 class IslandsController < ApplicationController
+  def index
+    @islands = policy_scope(Island)
+  end
+
   def show
     set_island
     authorize @island
-  end
-
-  def index
-    @islands = policy_scope(Island)
   end
 
   def edit
