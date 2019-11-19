@@ -1,0 +1,5 @@
+<%= simple_form_for [@island] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Save Island", class: "btn btn-primary" %>
+<% end %>
+ <h2><%= link_to "back to main page", islands_path %></h2>
