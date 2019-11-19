@@ -2,8 +2,8 @@
 <div class="container">
   <div class="row">
     <% @islands.each do |island| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: white;">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card" style="background-image: url('https://www.privateislandsonline.com/uploads/984/58fa753c8c47a.jpg')">
           <div class="card-description">
             <h3>Name: <%= link_to island.name, island_path(island) %></h3>
           </div>
@@ -31,4 +31,5 @@
     <% end %>
   </div>
 </div> -->
+style="background-image: url('https://www.privateislandsonline.com/uploads/984/58fa753c8c47a.jpg')
 

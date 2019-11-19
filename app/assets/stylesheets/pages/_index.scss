@@ -1,2 +1,19 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-description {
+  padding: 10px;
+}
+
+.card p {
+  padding: 10px;
+}
+
+.card {
+  margin: 10px;
+}
