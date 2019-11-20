@@ -1,1 +1,12 @@
-<p>Your E-Mail: <%= @email %></p>
+<div class="user-settings">
+  <img src="" alt="" class="avatar-large">
+  <%= link_to "Edit profile", edit_user_path(current_user) %>
+  <div style="margin-top: 25px; margin-bottom:25px ">
+    <hr>
+  </div>
+  <p><b><%= current_user.name %>'s profile:</b></p>
+  <div class="user-name-email">
+    <p>Name: <%= current_user.name %></p>
+    <p>E-Mail: <%= current_user.email %></p>
+  </div>
+</div>
