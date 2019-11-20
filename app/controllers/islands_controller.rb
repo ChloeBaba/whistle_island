@@ -1,6 +1,6 @@
 class IslandsController < ApplicationController
   def index
-    @islands = policy_scope(Island)
+    @islands = policy_scope(Island).order(created_at: :desc)
   end
 
   def show
@@ -27,6 +27,7 @@ class IslandsController < ApplicationController
 
   def create
     @island = Island.new(island_params)
+    # the user, who creates the island is the owner of that island:
     @island.user = current_user
     if @island.save!
       redirect_to island_path(@island)
