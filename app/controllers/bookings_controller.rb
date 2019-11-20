@@ -42,6 +42,14 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
+  def destroy
+    set_booking
+    @island = @booking.island
+    @booking.delete
+    redirect_to island_bookings_path(@island)
+    authorize @booking
+  end
+
   private
 
   def set_booking
