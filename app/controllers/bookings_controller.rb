@@ -26,6 +26,22 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
+  def edit
+    set_booking
+    @booking.island = Island.find(params[:island_id])
+    authorize @booking
+  end
+
+  def update
+    set_booking
+    if @booking.update(booking_params)
+      redirect_to island_booking_path(@booking.island, @booking), notice: 'Booking was successfully updated.'
+    else
+      render :edit
+    end
+    authorize @booking
+  end
+
   private
 
   def set_booking
