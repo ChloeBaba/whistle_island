@@ -2,6 +2,7 @@
   <%= simple_form_for @island do |f| %>
         <%= f.input :name %>
         <%= f.input :description %>
+        <%= link_to 'Upload Photos', new_island_photo_path(@island), class: 'btn btn-primary' %>
         <%= f.input :price %>
         <%= f.input :availability %>
         <%= f.button :submit, class: 'btn btn-primary' %>
