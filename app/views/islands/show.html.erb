@@ -31,11 +31,12 @@
 <p><%= @island.availability %></p>
 <p><%= @island.price %></p>
 
-
-<%= link_to "Book !", new_island_booking_path(@island), class: 'btn btn-primary' %>
-<%= link_to "Back to the list", islands_path, class: 'btn btn-primary' %>
-<%= link_to "Edit", edit_island_path(@island), class: 'btn btn-primary' %>
-<%= link_to "Delete", island_path(@island), class: 'btn btn-primary', method: :delete,
-      data: { confirm: "Are you sure?" } %>
+<div class="button">
+  <%= link_to "Book !", new_island_booking_path(@island), class: 'btn btn-primary' %>
+  <%= link_to "Back to the list", islands_path, class: 'btn btn-primary' %>
+  <%= link_to "Edit", edit_island_path(@island), class: 'btn btn-primary' %>
+  <%= link_to "Delete", island_path(@island), class: 'btn btn-primary', method: :delete,
+        data: { confirm: "Are you sure?" } %>
 </div>
 
+</div>
