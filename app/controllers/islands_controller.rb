@@ -5,7 +5,6 @@ class IslandsController < ApplicationController
 
   def show
     set_island
-    @photos = Photo.where(params[:id])
     authorize @island
   end
 
