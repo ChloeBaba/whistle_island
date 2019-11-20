@@ -1,17 +1,25 @@
-<div class="container">
-  <h1>Here is the list of your bookings:</h1>
-
+<h1 class="title">Your bookings</h1>
+<div class="cards">
   <% @bookings.each do |booking| %>
-    <h3><%= link_to booking.island.name, island_booking_path(booking.island, booking) %></h3>
-    <h5><%= booking.island.description %></h5>
-    <p>Arrival: <%= booking.start_date %></p>
-    <p>Departure: <%= booking.end_date %></p>
-    <p>Price: <%= booking.total_price %></p>
-    <%= link_to "🗑", booking_path(booking),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
+      <div class="card-island">
+        <%= cl_image_tag booking.island.photo %>
+        <div class="card-island-infos">
+          <div>
+            <h2><%= link_to booking.island.name, island_booking_path(booking.island, booking) %></h2>
+            <p>Arrival: <%= booking.start_date %></p>
+            <p>Departure: <%= booking.end_date %></p>
+            <% if policy(booking).destroy? %>
+              <%= link_to "CANCEL BOOKING", booking_path(booking),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+            <% end %>
+          </div>
+          <h2 class="price">Total price: <%= (booking.end_date - booking.start_date) * booking.island.price %></h2>
+        </div>
+      </div>
   <% end %>
 </div>
+
 
 
 
