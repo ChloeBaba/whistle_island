@@ -1,32 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<!-- <h1 class="d-flex justify-content-center">Whistle Islands</h1>
->>>>>>> a0e6122c090910e368309765e103e68bbf27c1f8
-<div class="container">
-<h1 class="d-flex justify-content-center">Whistle Islands</h1>
-  <div class="row">
-    <% @islands.each do |island| %>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card" style="background-image: url('https://www.privateislandsonline.com/uploads/984/58fa753c8c47a.jpg')">
-          <div class="card-description">
-            <h3>Name: <%= link_to island.name, island_path(island) %></h3>
-          </div>
-          <p><b>Description</b> <%= island.description %></p>
-          <p><b>Owner</b> <%= island.user.email %></p>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div> -->
-
-<<<<<<< HEAD
-=======
-<h1 class="d-flex justify-content-center">Whistle Islands</h1>
-=======
-<!-- <h1 class="d-flex justify-content-center">Whistle Islands</h1> -->
 <h1 class="title">Whistle Islands</h1>
->>>>>>> cf322f88a9212af732c4300591def6582ec145fb
 <div class="cards">
   <% @islands.each do |island| %>
       <div class="card-island">
@@ -37,10 +9,7 @@
             <p><%= island.description %></p>
           </div>
           <h2 class="price"><%= island.price %>$/Night</h2>
-          <!-- <img src="https://i.pinimg.com/originals/b6/4f/fe/b64ffe7276b4579c348f6bea88c2bb44.png" class="card-island-user avatar-bordered" /> -->
         </div>
       </div>
   <% end %>
 </div>
-
->>>>>>> a0e6122c090910e368309765e103e68bbf27c1f8
