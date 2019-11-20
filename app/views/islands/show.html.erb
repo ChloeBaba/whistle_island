@@ -31,8 +31,14 @@
 <p><%= @island.availability  %></p>
 
 <%= link_to "Back to the list - ", islands_path, class: 'btn btn-primary' %>
-<%= link_to "Edit your Island -", edit_island_path(@island), class: 'btn btn-primary' %>
-<%= link_to "Delete your Island", island_path(@island), class: 'btn btn-primary', method: :delete,
+<!-- If I am the owner, display the link-->
+<!-- otherwise, don't -->
+<% if current_user == @island.user %>
+  <%= link_to "Edit your Island -", edit_island_path(@island), class: 'btn btn-primary' %>
+  <%= link_to "Delete your Island", island_path(@island), class: 'btn btn-primary', method: :delete,
       data: { confirm: "Are you sure?" } %>
+<% else %>
+  <!-- nothing -->
+<% end %>
 </div>
 
