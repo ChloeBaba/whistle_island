@@ -1,0 +1,7 @@
+<h1>Upload multiple photos here</h1>
+
+<%= simple_form_for [@island, @photo] do |f| %>
+  <%= f.input :photo_path %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit "Save Photo", class: "btn btn-primary" %>
+<% end %>

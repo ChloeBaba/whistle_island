@@ -1,9 +1,17 @@
-<%= simple_form_for [@island] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.submit "Save Island", class: "btn btn-primary" %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-<% end %>
- <h2><%= link_to "back to main page", islands_path %></h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <%= simple_form_for [@island] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.submit "Save Island", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </body>
+</html>
+
 
