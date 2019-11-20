@@ -1,7 +1,12 @@
 class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      # anyone can view any booking:
+      # scope.all
+
+      # display only bookings where user is renter
+      scope.where(user: user)
+      # display only bookings where user is island owner??
     end
   end
 
