@@ -1,10 +1,14 @@
 <div class="container">
-<h3>Booking details for ID: <%= @booking.id %></h3>
-<p>Island: <%= @booking.island.name  %></p>
-<p>Check in:<%= @booking.start_date  %></p>
-<p>Check out:<%= @booking.end_date  %></p>
-<% booked_days = @booking.end_date - @booking.start_date %>
-<p>EUR <%= @booking.island.price  %> x <%= booked_days %> days = X EUR</p>
+  <h3>Booking details for ID: <%= @booking.id %></h3>
+  <p>Island: <%= @booking.island.name  %></p>
+  <p>Check in:<%= @booking.start_date  %></p>
+  <p>Check out:<%= @booking.end_date  %></p>
+  <% booked_days = @booking.end_date - @booking.start_date %>
+  <p>EUR <%= @booking.island.price  %> x <%= booked_days %> days = X EUR</p>
+
+  <%= link_to "Delete your booking", booking_path(@booking),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
 </div>
 
 

@@ -3,8 +3,6 @@ class BookingsController < ApplicationController
     @bookings = policy_scope(Booking)
   end
 
-  end
-
   def show
     set_booking
     authorize @booking
