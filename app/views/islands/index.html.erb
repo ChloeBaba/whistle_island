@@ -1,35 +1,18 @@
-<h1 class="d-flex justify-content-center">Whistle Islands</h1>
-<div class="container">
-  <div class="row">
-    <% @islands.each do |island| %>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card" style="background-image: url('https://www.privateislandsonline.com/uploads/984/58fa753c8c47a.jpg')">
-          <div class="card-description">
-            <h3>Name: <%= link_to island.name, island_path(island) %></h3>
+<!-- <h1 class="d-flex justify-content-center">Whistle Islands</h1> -->
+<h1 class="title">Whistle Islands</h1>
+<div class="cards">
+  <% @islands.each do |island| %>
+      <div class="card-island">
+        <%= cl_image_tag island.photo %>
+        <div class="card-island-infos">
+          <div>
+            <h2><%= link_to island.name, island_path(island) %></h2>
+            <p><%= island.description %></p>
           </div>
-          <p><b>Description</b> <%= island.description %></p>
-          <p><b>Owner</b> <%= island.user.email %></p>
+          <h2 class="price"><%= island.price %>$/Night</h2>
+          <!-- <img src="https://i.pinimg.com/originals/b6/4f/fe/b64ffe7276b4579c348f6bea88c2bb44.png" class="card-island-user avatar-bordered" /> -->
         </div>
       </div>
-    <% end %>
-  </div>
+  <% end %>
 </div>
-
-<!-- <div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <% @islands.each do |island| %>
-      <div class="col-md-4">
-        <img src="..." class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Name: <%= link_to island.name, island_path(island) %></h5>
-          <p class="card-text"><b>Description</b> <%= island.description %></p>
-          <p class="card-text"><b>Owner</b> <%= island.user.email %></p>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div> -->
-style="background-image: url('https://www.privateislandsonline.com/uploads/984/58fa753c8c47a.jpg')
 

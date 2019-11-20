@@ -18,21 +18,37 @@ user_9 = User.create!(email: "user_9@example.com", password: "123456")
 user_10 = User.create!(email: "user_10@example.com", password: "123456")
 
 puts 'Creating islands...'
-island_1 = Island.new(name: "island_1", description: "blablabla_1", availability: true)
-island_2 = Island.new(name: "island_2", description: "blablabla_2", availability: true)
-island_3 = Island.new(name: "island_3", description: "blablabla_3", availability: true)
-island_4 = Island.new(name: "island_4", description: "blablabla_4", availability: true)
-island_5 = Island.new(name: "island_5", description: "blablabla_5", availability: true)
+island_1 = Island.new(name: "Seychelles", description: "Indian Ocean", availability: true, price: 5400)
+island_2 = Island.new(name: "Santorini", description: "Greece", availability: true, price: 2800)
+island_3 = Island.new(name: "Fiji", description: "South Pacific", availability: true, price: 9700)
+island_4 = Island.new(name: "Kauaʻi", description: "Hawaï", availability: true, price: 3900)
+island_5 = Island.new(name: "Capri", description: "Italy", availability: true, price: 7600)
+island_6 = Island.new(name: "Kame House", description: "???", availability: true, price: 10000)
+
 island_1.user = user_1
 island_2.user = user_2
 island_3.user = user_3
 island_4.user = user_4
 island_5.user = user_5
+island_6.user = user_6
+url = 'https://www.planetware.com/photos-large/SEY/best-islands-seychelles.jpg'
+island_1.remote_photo_url = url
+url = 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
+island_2.remote_photo_url = url
+url = 'https://www.planetware.com/photos-large/SEY/best-islands-fiji.jpg'
+island_3.remote_photo_url = url
+url = 'https://www.planetware.com/photos-large/SEY/best-islands-kauai.jpg'
+island_4.remote_photo_url = url
+url = 'https://www.planetware.com/photos-large/SEY/best-islands-capri.jpg'
+island_5.remote_photo_url = url
+url = 'https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg'
+island_6.remote_photo_url = url
 island_1.save!
 island_2.save!
 island_3.save!
 island_4.save!
 island_5.save!
+island_6.save!
 
 puts 'Creating bookings'
 booking_1 = Booking.new(start_date: Date.new(2019,12,6), end_date: Date.new(2019,12,7), total_price: 1)
