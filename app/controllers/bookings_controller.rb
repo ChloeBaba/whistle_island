@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
     @bookings = policy_scope(Booking)
   end
 
+  end
+
   def show
     set_booking
     authorize @booking
@@ -39,6 +41,14 @@ class BookingsController < ApplicationController
     else
       render :edit
     end
+    authorize @booking
+  end
+
+  def destroy
+    set_booking
+    @island = @booking.island
+    @booking.delete
+    redirect_to island_bookings_path(@island)
     authorize @booking
   end
 
