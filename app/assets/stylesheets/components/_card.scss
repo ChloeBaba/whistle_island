@@ -1,8 +1,80 @@
-.card {
-  background-position: center;
-  color: white;
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 20px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-island {
+  overflow: hidden;
+  background: white;
+}
+
+.card-island > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-island h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-island p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-island .card-island-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   position: relative;
-  border-radius: 5px;
-  width: auto;
-  background-size: cover;
+}
+
+.card-island-infos .card-island-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
 }
