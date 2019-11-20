@@ -26,9 +26,9 @@
 
   <h3>Description :</h3>
 
-  <p><%= @island.description %></p>
-  <p><%= @island.price %></p>
-  <p><%= @island.availability %></p>
+<p><%= @island.description %></p>
+<p><%= @island.price %> $ per night</p>
+<p><%= @island.availability %></p>
 
   <%= link_to "Book !", new_island_booking_path(@island), class: 'btn btn-primary' %>
   <%= link_to "Back to the list", islands_path, class: 'btn btn-primary' %>
