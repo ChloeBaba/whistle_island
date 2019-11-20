@@ -1,6 +1,7 @@
 class IslandPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
+      # anyone can view any island
       scope.all
     end
   end
@@ -13,19 +14,15 @@ class IslandPolicy < ApplicationPolicy
     true
   end
 
-  def new?
-    create?
-  end
-
   def update?
-    true
-  end
-
-  def edit?
-    update?
+    # - user = current_user from Devise
+    # - record = @island
+    # If I did create the Island => true
+    # Otherwise => false
+    record.user == user
   end
 
   def destroy?
-    true
+    record.user == user
   end
 end

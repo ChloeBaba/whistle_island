@@ -6,7 +6,10 @@
   <% booked_days = @booking.end_date - @booking.start_date %>
   <p>EUR <%= @booking.island.price  %> x <%= booked_days %> days = X EUR</p>
 
-  <%= link_to "Delete your booking", booking_path(@booking),
+  <%= link_to "Edit your booking", new_island_booking_path(@booking.island), class: 'btn btn-primary' %>
+<!--   # to be modified for a redirection to the booking confirmation
+ -->  <a href="#" class= 'btn btn-primary'>Confirm your booking</a>
+  <%= link_to "Cancel your booking", booking_path(@booking), class: 'btn btn-primary',
       method: :delete,
       data: { confirm: "Are you sure?" } %>
 </div>
