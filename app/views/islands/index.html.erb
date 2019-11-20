@@ -1,5 +1,5 @@
-<h1 class="d-flex justify-content-center">Whistle Islands</h1>
 <div class="container">
+<h1 class="d-flex justify-content-center">Whistle Islands</h1>
   <div class="row">
     <% @islands.each do |island| %>
       <div class="col-12 col-md-6 col-lg-4">
@@ -14,22 +14,4 @@
     <% end %>
   </div>
 </div>
-
-<!-- <div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <% @islands.each do |island| %>
-      <div class="col-md-4">
-        <img src="..." class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Name: <%= link_to island.name, island_path(island) %></h5>
-          <p class="card-text"><b>Description</b> <%= island.description %></p>
-          <p class="card-text"><b>Owner</b> <%= island.user.email %></p>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div> -->
-style="background-image: url('https://www.privateislandsonline.com/uploads/984/58fa753c8c47a.jpg')
 
