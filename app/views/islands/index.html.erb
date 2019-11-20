@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <!-- <h1 class="d-flex justify-content-center">Whistle Islands</h1>
 >>>>>>> a0e6122c090910e368309765e103e68bbf27c1f8
@@ -22,17 +23,21 @@
 <<<<<<< HEAD
 =======
 <h1 class="d-flex justify-content-center">Whistle Islands</h1>
+=======
+<!-- <h1 class="d-flex justify-content-center">Whistle Islands</h1> -->
+<h1 class="title">Whistle Islands</h1>
+>>>>>>> cf322f88a9212af732c4300591def6582ec145fb
 <div class="cards">
   <% @islands.each do |island| %>
       <div class="card-island">
-        <img src="https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg" />
+        <%= cl_image_tag island.photo %>
         <div class="card-island-infos">
           <div>
             <h2><%= link_to island.name, island_path(island) %></h2>
             <p><%= island.description %></p>
           </div>
-          <h2 class="price"><%= island.price %></h2>
-          <img src="https://i.pinimg.com/originals/b6/4f/fe/b64ffe7276b4579c348f6bea88c2bb44.png" class="card-island-user avatar-bordered" />
+          <h2 class="price"><%= island.price %>$/Night</h2>
+          <!-- <img src="https://i.pinimg.com/originals/b6/4f/fe/b64ffe7276b4579c348f6bea88c2bb44.png" class="card-island-user avatar-bordered" /> -->
         </div>
       </div>
   <% end %>
