@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for @user, url: user_session_path(@user) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.label :profile_photo %>
+    <%= f.file_field :profile_photo, label: 'Profile photo' %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  <% end %>
+</div>

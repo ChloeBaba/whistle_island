@@ -1,5 +1,5 @@
 <div class="user-settings">
-  <img src="" alt="" class="avatar-large">
+  <%= cl_image_tag current_user.photo class="avatar-large"%>
   <%= link_to "Edit profile", edit_user_path(current_user) %>
   <div style="margin-top: 25px; margin-bottom:25px ">
     <hr>
