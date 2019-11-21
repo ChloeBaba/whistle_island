@@ -28,7 +28,7 @@ class BookingsController < ApplicationController
 
   def edit
     set_booking
-    @booking.island = Island.find(params[:island_id])
+    @booking = Booking.find(params[:id])
     authorize @booking
   end
 
