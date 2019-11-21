@@ -1,5 +1,53 @@
-<div class="container">
-  <h3>Booking details for ID: <%= @booking.id %></h3>
+<div class="booking-show-container">
+  <% days = @booking.end_date.day - @booking.start_date.day %>
+  <h3>Confirmed: <%= days %> days on <%= @booking.island.name %></h3>
+  <div class="booking-show-status">
+    <p>Booked by <%= @booking.user.name %><%= @booking.created_at.strftime(" on %m/%d/%Y") %> <%= @booking.created_at.strftime("at %I:%M%p") %></p>
+    <% if @booking.status == 'confirmed' %>
+      <p><b>ACCEPTED</b></p>
+    <% else %>
+      <p><b>PENDING</b></p>
+    <% end %>
+  </div>
+  <div class="booking-show-boxes">
+    <div class="booking-details">
+      <div class="booking-confirm-date-range">
+        <div class="booking-confirm-arrival">
+          <p>Arrival:</p>
+          <p><%= @booking.start_date.strftime("%m/%d/%Y") %></p>
+        </div>
+        <div class="booking-confirm-departure">
+          <p>Departure:</p>
+          <p><%= @booking.end_date.strftime("%m/%d/%Y") %></p>
+        </div>
+      </div>
+      <div style="margin-top: 25px; margin-bottom:25px">
+        <hr>
+      </div>
+      <div class="booking-show-description">
+        <p><%= @booking.island.description %></p>
+      </div>
+      <div style="margin-top: 25px; margin-bottom:25px">
+        <hr>
+      </div>
+      <div class="booking-show-host-info">
+        <p>Hosted by <%= @booking.island.user.name %></p>
+        <p>E-mail: <%= @booking.island.user.email %></p>
+      </div>
+    </div>
+    <div class="booking-costs">
+      <h4>Charges:</h4>
+      <div class="booking-total-price">
+        <p>EUR <%= @booking.island.price %> x <%= days %> days</p>
+        <% total = @booking.island.price * days %>
+        <p><b>EUR <%= total %></b></p>
+      </div>
+    </div>
+  </div>
+
+
+
+
   <p>Island: <%= @booking.island.name  %></p>
   <p>Check in:<%= @booking.start_date  %></p>
   <p>Check out:<%= @booking.end_date  %></p>
