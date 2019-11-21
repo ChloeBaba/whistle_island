@@ -1,24 +1,36 @@
-  <h1> <%= @island.name  %> </h1>
+<div class="container"><div class="island-card">
+      <div class="row">
+      <div class="col-6 col-md-4">
+        <div class="island-info">
+        <h1> <%= @island.name %> </h1>
+        <h3>Description:</h3>
+        <p><%= @island.description %></p>
+        <p><b>Price</b> : <%= @island.price %> $ per night</p>
+        <p><b>Status</b> : <% if @island.availability %> Available </p>
+          <% else %>
+            Not available
+          <% end %>
 
-  <h3>Description :</h3>
+          <%= link_to "Book", new_island_booking_path(@island), class: 'btn btn-primary' %>
+          <%= link_to "Display all Islands", islands_path, class: 'btn btn-primary' %>
+          <!-- If I am the owner, display the link-->
+          <!-- otherwise, don't -->
+          <% if current_user == @island.user %>
+            <%= link_to "Edit information", edit_island_path(@island), class: 'btn btn-primary' %>
+            <%= link_to "Delete", island_path(@island), class: 'btn btn-primary', method: :delete,
+                data: { confirm: "Are you sure?" } %>
+          <% else %>
+            <!-- nothing -->
+          <% end %>
+        </div>
+      </div>
+        <div class="col-6 col-md-8">
+            <%= cl_image_tag @island.photo, class:"island-photo" %>
+        </div>
+        </div>
+    </div>
+    </div>
+  </div>
 
-<p><%= @island.description %></p>
-<p>Price : <%= @island.price %> $ per night</p>
-<p> Status : <% if @island.availability %> Available </p>
-  <% else %>
-    Not available
-  <% end %>
 
-  <%= link_to "Book !", new_island_booking_path(@island), class: 'btn btn-primary' %>
-  <%= link_to "Back to the list", islands_path, class: 'btn btn-primary' %>
-  <!-- If I am the owner, display the link-->
-  <!-- otherwise, don't -->
-  <% if current_user == @island.user %>
-    <%= link_to "Edit your Island", edit_island_path(@island), class: 'btn btn-primary' %>
-    <%= link_to "Delete your Island", island_path(@island), class: 'btn btn-primary', method: :delete,
-        data: { confirm: "Are you sure?" } %>
-  <% else %>
-    <!-- nothing -->
-  <% end %>
-</div>
-
+  </div>
