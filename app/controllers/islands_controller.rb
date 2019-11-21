@@ -1,5 +1,14 @@
 class IslandsController < ApplicationController
   def index
+    @islands = Island.geocoded
+
+    @markers = @islands.map do |island|
+      {
+        lat: island.latitude,
+        lng: island.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { island: island })
+      }
+    end
     if params[:query].present?
       sql_query =
         " islands.name @@ :query \
