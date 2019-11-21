@@ -18,12 +18,12 @@ user_9 = User.create!(email: "user_9@example.com", password: "123456")
 user_10 = User.create!(email: "user_10@example.com", password: "123456")
 
 puts 'Creating islands...'
-island_1 = Island.new(name: "Seychelles", description: "Indian Ocean", availability: true, price: 5400)
-island_2 = Island.new(name: "Santorini", description: "Greece", availability: true, price: 2800)
-island_3 = Island.new(name: "Fiji", description: "South Pacific", availability: true, price: 9700)
-island_4 = Island.new(name: "Kauaʻi", description: "Hawaï", availability: true, price: 3900)
-island_5 = Island.new(name: "Capri", description: "Italy", availability: true, price: 7600)
-island_6 = Island.new(name: "Kame House", description: "???", availability: true, price: 10000)
+island_1 = Island.new(name: "Seychelles", description: "Indian Ocean", availability: true, price: 5400, location: "Seychelles")
+island_2 = Island.new(name: "Santorini", description: "Greece", availability: true, price: 2800, location: "Santorini")
+island_3 = Island.new(name: "Fiji", description: "South Pacific", availability: true, price: 9700, location: "Fiji")
+island_4 = Island.new(name: "Kauaʻi", description: "Hawaï", availability: true, price: 3900, location: "Kauaʻi")
+island_5 = Island.new(name: "Capri", description: "Italy", availability: true, price: 7600, location: "Capri")
+island_6 = Island.new(name: "Kame House", description: "???", availability: true, price: 10000, location: "Solomon Islands")
 
 island_1.user = user_1
 island_2.user = user_2

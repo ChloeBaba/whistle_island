@@ -5,6 +5,7 @@
         <h1> <%= @island.name %> </h1>
         <h3>Description:</h3>
         <p><%= @island.description %></p>
+        <p><b>Location</b> : <%= @island.location %></p>
         <p><b>Price</b> : <%= @island.price %> $ per night</p>
         <p><b>Status</b> : <% if @island.availability %> Available </p>
           <% else %>
