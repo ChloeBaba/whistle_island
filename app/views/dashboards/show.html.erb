@@ -1,8 +1,50 @@
+
 <div class="card-dashboard">
+  <div class="col-sm-6">
+    <div class="card-dashboard-user-profile">
+      <div class="dash-user-pic">
+        <%= cl_image_tag current_user.profile_photo, class:"dash-img" %>
+      </div>
+      <div class="dash-user-profile">
+        <h2><%= current_user.name %></h2>
+        <h4><%= link_to "Edit profile", update_user_path(current_user) %></h4>
+      </div>
+    </div>
+  </div>
+    <div class="card-dashboard-bookings-islands">
+    <div>
+      <h2>My Bookings</h2>
+    </div>
+    <div class=row>
+        <% @bookings.each do |booking| %>
+          <div class="dashboard-card-product">
+            <%= cl_image_tag booking.island.photo %>
+            <div class="card-product-infos">
+              <h4> <%= booking.island.name %> </h4>
+              <p>From <em><%= booking.start_date %></em> to <em><%=booking.end_date %></em></p>
+              <p><%= booking.island.price %> ₽/day </p>
+            </div>
+          </div>
+          <% end %>
+    </div>
+    <div>
+      <h2>My Islands</h2>
+    </div>
+    <div class=row>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="card-dashboard">
   <div class=row>
     <div class="col-6 cold-md-4">
     <div class="left-user-info">
-    </div>
+        <%= cl_image_tag current_user.profile_photo, class:"dash-img" %>
+        <div class="card-user-infos">
+          <div>
+            <h2><%= link_to "Edit profile", update_user_path(current_user) %></h2>
+          </div>
     </div>
 
       <div class=row>
@@ -20,3 +62,4 @@
       <% end %>
   </div>
 </div>
+ -->
