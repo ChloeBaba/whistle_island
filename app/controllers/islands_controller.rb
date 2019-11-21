@@ -25,7 +25,7 @@ class IslandsController < ApplicationController
   def update
     set_island
     @island.update(island_params)
-    redirect_to island_path(@island)
+    redirect_to island_path(@island), notice: 'Island was successfully updated.'
     authorize @island
   end
 
@@ -39,7 +39,7 @@ class IslandsController < ApplicationController
     # the user, who creates the island is the owner of that island:
     @island.user = current_user
     if @island.save!
-      redirect_to island_path(@island)
+      redirect_to island_path(@island), notice: 'Island was successfully added.'
     else
       render :new
     end
@@ -49,7 +49,7 @@ class IslandsController < ApplicationController
   def destroy
     set_island
     @island.destroy
-    redirect_to islands_path
+    redirect_to islands_path, notice: 'Island was successfully deleted.'
     authorize @island
   end
 
