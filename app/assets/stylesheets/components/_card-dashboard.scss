@@ -1,6 +1,6 @@
 .card-dashboard {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr ;
   grid-gap: 16px;
   padding: 15px;
 }
@@ -19,21 +19,22 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .card-dashboard {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .card-dashboard {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 }
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .card-dashboard {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 }
+
 
 
 

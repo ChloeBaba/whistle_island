@@ -1,3 +1,5 @@
 .row {
-justify-content: flex-end;
+  display: flex;
+  /* Cette valeur peut être changée dans l'exemple */
+  justify-content: space-between;
 }
