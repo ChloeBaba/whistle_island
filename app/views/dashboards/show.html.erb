@@ -1,6 +1,22 @@
-<%= @bookings %>
-<%= @islands %>
-<%= current_user.email %>
-<%= current_user.name %>
-<%= current_user.profile_photo %>
+<% @bookings.each do |booking| %>
+<%= booking.start_date %>
+<%= booking.end_date %>
+<% end %>
 
+---------------
+
+<% @islands.each do |island| %>
+<%= island.name %>
+<%= island.description %>
+<%= island.price %>
+<%= cl_image_tag island.photo %>
+<% end %>
+
+
+<div class="card-product">
+  <%= cl_image_tag island.photo %>
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
