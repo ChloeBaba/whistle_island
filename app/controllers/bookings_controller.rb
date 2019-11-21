@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.island = Island.find(params[:island_id])
     @booking.user = current_user
     if @booking.save
-      redirect_to island_booking_path(@booking.island, @booking), notice: 'Booking request was successfully sent.'
+      redirect_to booking_path(@booking), notice: 'Booking request was successfully sent.'
     else
       render :new
     end
