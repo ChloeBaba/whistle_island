@@ -5,8 +5,8 @@ class IslandsController < ApplicationController
         " islands.name @@ :query \
         OR islands.description @@ :query \
         "
-        @islands = Island.where(sql_query, query: "%#{params[:query]}%")
-          policy_scope(@islands)
+      @islands = Island.where(sql_query, query: "%#{params[:query]}%")
+      policy_scope(@islands)
     else
       @islands = policy_scope(Island).order(created_at: :desc)
     end
