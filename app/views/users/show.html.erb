@@ -1,8 +1,12 @@
 <div class="user-settings">
-  <% if current_user.profile_photo %>
-    <%= cl_image_tag current_user.profile_photo, class: "avatar-large"%>
-  <% end %>
-  <%= link_to "Edit profile", update_user_path(current_user) %>
+  <div class="profile-pic">
+    <% if current_user.profile_photo %>
+      <%= cl_image_tag current_user.profile_photo, class: "avatar-xlarge"%>
+    <% end %>
+    <div>
+      <%= link_to "Edit profile", update_user_path(current_user) %>
+    </div>
+  </div>
   <div style="margin-top: 25px; margin-bottom:25px ">
     <hr>
   </div>
