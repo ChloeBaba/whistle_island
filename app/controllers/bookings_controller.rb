@@ -28,14 +28,14 @@ class BookingsController < ApplicationController
 
   def edit
     set_booking
-    @booking.island = Island.find(params[:island_id])
+    @booking = Booking.find(params[:id])
     authorize @booking
   end
 
   def update
     set_booking
     if @booking.update(booking_params)
-      redirect_to island_booking_path(@booking.island, @booking), notice: 'Booking was successfully updated.'
+      redirect_to booking_path(@booking), notice: 'Booking was successfully updated.'
     else
       render :edit
     end

@@ -1,0 +1,36 @@
+.booking-show-container {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 80px;
+  align-items:center;
+  justify-content: center
+}
+.booking-show-status {
+  display: flex;
+  justify-content: space-between;
+}
+.booking-show-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+.booking-confirm-date-range {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.booking-details {
+  width: 49%;
+  padding: 20px;
+  border: 1px solid black;
+}
+.booking-costs {
+  width: 49%;
+  padding: 20px;
+  border: 1px solid black;
+}
+.booking-total-price {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+
