@@ -2,5 +2,15 @@
   <div class="container">
     <h1>Your holidays start <strong>now</strong>.</h1>
      <%= link_to "Discover", islands_path, class: "discover-buton btn-flat" %>
+    <div class ="search-control form-group">
+  <%= form_tag islands_path, method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find an island"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
   </div>
 </div>
