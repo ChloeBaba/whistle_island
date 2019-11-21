@@ -46,7 +46,7 @@ class BookingsController < ApplicationController
     set_booking
     @island = @booking.island
     @booking.destroy
-    redirect_to island_bookings_path(@island)
+    redirect_to island_bookings_path(@island), notice: 'Booking was successfully deleted.'
     authorize @booking
   end
 
