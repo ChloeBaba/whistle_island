@@ -1,5 +1,6 @@
-<div class="container">
-  <%= simple_form_for @user, url: user_session_path(@user) do |f| %>
+<div class="user-settings">
+  <%= simple_form_for @user, url: edit_user_path(@user) do |f| %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <%= f.input :name %>
     <%= f.input :email %>
     <%= f.label :profile_photo %>

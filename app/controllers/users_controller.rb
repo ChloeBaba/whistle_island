@@ -10,14 +10,15 @@ class UsersController < ApplicationController
   end
 
   def update
-    current_user.update
-    redirect_to dashboard_path
+    @user = current_user
+    @user.update(user_params)
+    redirect_to edit_user_path
     authorize current_user
   end
 
   private
 
   def user_params
-    params.require(:current_user).permit(:name, :email, :profile_photo)
+    params.require(:user).permit(:name, :email, :profile_photo)
   end
 end
