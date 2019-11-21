@@ -6,6 +6,12 @@
   width: 56px;
   border-radius: 50%;
 }
+.avatar-xlarge {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
