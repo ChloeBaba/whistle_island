@@ -34,32 +34,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- <div class="card-dashboard">
-  <div class=row>
-    <div class="col-6 cold-md-4">
-    <div class="left-user-info">
-        <%= cl_image_tag current_user.profile_photo, class:"dash-img" %>
-        <div class="card-user-infos">
-          <div>
-            <h2><%= link_to "Edit profile", update_user_path(current_user) %></h2>
-          </div>
-    </div>
-
-      <div class=row>
-    <div class="col-6 cold-md-4">
-      <% @bookings.each do |booking| %>
-        <div class="dashboard-card-product">
-          <%= cl_image_tag booking.island.photo %>
-          <div class="card-product-infos">
-            <h4> <%= booking.island.name %> </h4>
-            <p>From <em><%= booking.start_date %></em> to <em><%=booking.end_date %></em></p>
-            <p><%= booking.island.price %> ₽/day </p>
-          </div>
-        </div>
-      </div>
-      <% end %>
-  </div>
-</div>
- -->

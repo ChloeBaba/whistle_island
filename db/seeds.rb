@@ -6,24 +6,25 @@ Island.destroy_all
 User.destroy_all
 
 puts 'Creating users...'
-user_1 = User.create!(email: "user_1@example.com", password: "123456")
-user_2 = User.create!(email: "user_2@example.com", password: "123456")
-user_3 = User.create!(email: "user_3@example.com", password: "123456")
-user_4 = User.create!(email: "user_4@example.com", password: "123456")
-user_5 = User.create!(email: "user_5@example.com", password: "123456")
-user_6 = User.create!(email: "user_6@example.com", password: "123456")
-user_7 = User.create!(email: "user_7@example.com", password: "123456")
-user_8 = User.create!(email: "user_8@example.com", password: "123456")
-user_9 = User.create!(email: "user_9@example.com", password: "123456")
-user_10 = User.create!(email: "user_10@example.com", password: "123456")
+user_1 = User.create!(name: "Commodus", email: "user_1@example.com", password: "123456")
+user_2 = User.create!(name: "Attila the Hun", email: "user_2@example.com", password: "123456")
+user_3 = User.create!(name: "Nero", email: "user_3@example.com", password: "123456")
+user_4 = User.create!(name: "Fu Sheng", email: "user_4@example", password: "123456")
+user_5 = User.create!(name: "Emperor Yang of Sui", email: "user_5@example.com", password: "123456")
+user_6 = User.create!(name: "Vlad the Impaler ", email: "user_6@example.com", password: "123456")
+user_7 = User.create!(name: "Ivan the Terrible", email: "user_7@example.com", password: "123456")
+user_8 = User.create!(name: "Caligula", email: "user_8@example.com", password: "123456")
+user_9 = User.create!(name: "Genghis Khan", email: "user_9@example.com", password: "123456")
+user_10 = User.create!(name: "Boudica", email: "user_10@example.com", password: "123456")
 
 puts 'Creating islands...'
-island_1 = Island.new(name: "Seychelles", description: "Indian Ocean", availability: true, price: 5400)
-island_2 = Island.new(name: "Santorini", description: "Greece", availability: true, price: 2800)
-island_3 = Island.new(name: "Fiji", description: "South Pacific", availability: true, price: 9700)
-island_4 = Island.new(name: "Kauaʻi", description: "Hawaï", availability: true, price: 3900)
-island_5 = Island.new(name: "Capri", description: "Italy", availability: true, price: 7600)
-island_6 = Island.new(name: "Kame House", description: "???", availability: true, price: 10000)
+
+island_1 = Island.new(name: "Seychelles", location: "Seychelles", description: "Located in the Indian Ocean, Seychelles islands is characterised by majestic seascapes, unparalleled beauty and temperate weather.", availability: true, price: 5400)
+island_2 = Island.new(name: "Santorini", location: "Santorini", description: "Located in Greece in the heart of the vast Aegean sea, Santorini boasts a unique landscape! The island's beauty speaks for itself. Come rent it out.", availability: true, price: 2800)
+island_3 = Island.new(name: "Fiji", location: "Fiji", description: "Located in the South Pacific, If someone asks, 'Are you happy?' What would you say? Well, if you rent Fiji, there is an almost nine-times-out-of-10 chance you'd say hanging with the fish here is pretty great.", availability: true, price: 9700)
+island_4 = Island.new(name: "Kauaʻi", location: "Kauaʻi", description: "Located in Hawaii, Kaua'i has emerald mountains, weeping waterfalls, red-rock canyons, jaw-dropping beaches, clear seas and big waves. Yay, you can surf here.", availability: true, price: 3900)
+island_5 = Island.new(name: "Capri", location: "Capri", description: "Located in Italy, Capri is an enchanting and picturesque island made of limestone rock. A favorite with Roman emperors, artists, and writers. It's one of the Mediterranean's must-see places.", availability: true, price: 7600)
+island_6 = Island.new(name: "Kame House", location: "Solomon Islands", description: "Located in the middle of the sea, Kame House is a house on an island in the sea.  There are some palm trees. ", availability: true, price: 10000)
 
 island_1.user = user_1
 island_2.user = user_2
