@@ -12,8 +12,6 @@
             Not available
           <% end %>
 
-          <%= link_to "Book", new_island_booking_path(@island), class: 'btn btn-primary' %>
-          <%= link_to "Display all Islands", islands_path, class: 'btn btn-primary' %>
           <!-- If I am the owner, display the link-->
           <!-- otherwise, don't -->
           <% if current_user == @island.user %>
@@ -30,6 +28,10 @@
         </div>
         </div>
     </div>
+                    <div class ="card-options">
+        <%= link_to "Book", new_island_booking_path(@island), class: 'btn btn-primary' %>
+          <%= link_to "Display all Islands", islands_path, class: 'btn btn-primary' %>
+        </div>
     </div>
   </div>
 

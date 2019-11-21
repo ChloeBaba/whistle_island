@@ -1,6 +1,23 @@
-<%= @bookings %>
-<%= @islands %>
-<%= current_user.email %>
-<%= current_user.name %>
-<%= current_user.profile_photo %>
+<div class="card-dashboard">
+  <div class=row>
+    <div class="col-6 cold-md-4">
+    <div class="left-user-info">
+    </div>
+    </div>
 
+      <div class=row>
+    <div class="col-6 cold-md-4">
+      <% @bookings.each do |booking| %>
+        <div class="dashboard-card-product">
+          <%= cl_image_tag booking.island.photo %>
+          <div class="card-product-infos">
+            <h4> <%= booking.island.name %> </h4>
+            <p>From <em><%= booking.start_date %></em> to <em><%=booking.end_date %></em></p>
+            <p><%= booking.island.price %> ₽/day </p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
+</div>
