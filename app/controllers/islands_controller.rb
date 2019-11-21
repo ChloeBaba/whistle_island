@@ -1,6 +1,15 @@
 class IslandsController < ApplicationController
   def index
-    @islands = policy_scope(Island).order(created_at: :desc)
+    if params[:query].present?
+      sql_query =
+        " islands.name @@ :query \
+        OR islands.description @@ :query \
+        "
+        @islands = Island.where(sql_query, query: "%#{params[:query]}%")
+          policy_scope(@islands)
+    else
+      @islands = policy_scope(Island).order(created_at: :desc)
+    end
   end
 
   def show
@@ -16,7 +25,7 @@ class IslandsController < ApplicationController
   def update
     set_island
     @island.update(island_params)
-    redirect_to island_path(@island)
+    redirect_to island_path(@island), notice: 'Island was successfully updated.'
     authorize @island
   end
 
@@ -30,7 +39,7 @@ class IslandsController < ApplicationController
     # the user, who creates the island is the owner of that island:
     @island.user = current_user
     if @island.save!
-      redirect_to island_path(@island)
+      redirect_to island_path(@island), notice: 'Island was successfully added.'
     else
       render :new
     end
@@ -40,7 +49,7 @@ class IslandsController < ApplicationController
   def destroy
     set_island
     @island.destroy
-    redirect_to islands_path
+    redirect_to islands_path, notice: 'Island was successfully deleted.'
     authorize @island
   end
 
