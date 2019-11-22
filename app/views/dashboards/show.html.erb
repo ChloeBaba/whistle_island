@@ -20,7 +20,7 @@
           <div class="dashboard-card-product">
             <%= cl_image_tag booking.island.photo %>
             <div class="card-product-infos">
-              <h4> <%= booking.island.name %> </h4>
+              <h4> <%= link_to booking.island.name, booking_path(booking) %> </h4>
               <p>From <em><%= booking.start_date %></em> to <em><%=booking.end_date %></em></p>
               <p><%= booking.island.price %> ₽/day </p>
             </div>
@@ -35,7 +35,7 @@
       <div class="dashboard-card-product">
           <%= cl_image_tag island.photo %>
           <div class="card-product-infos">
-              <h4> <%= island.name %> </h4>
+              <h4> <%= link_to island.name, island_path(island) %> </h4>
               <p> <%= island.description.first(20)... %> </p>
               <p><%= island.price %> ₽/day </p>
     </div>
@@ -44,5 +44,6 @@
 </div>
 </div>
 </div>
+
 
 
