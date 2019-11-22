@@ -29,8 +29,8 @@ island_7 = Island.new(name: "Cape Place", location: "Pacific Ocean", slogan: "Pr
 island_8 = Island.new(name: "Victoria", location: "Galapagos", slogan: "Come learn about the turtles", description: "Located in Greece in the heart of the vast Aegean sea, Santorini boasts a unique landscape! The island's beauty speaks for itself. Come rent it out.", availability: true, price: 7900)
 island_9 = Island.new(name: "Resting Volcano", location: "Iceland", slogan: "Aurora borealis need we say more?", description: "Located in the South Pacific, If someone asks, 'Are you happy?' What would you say? Well, if you rent Fiji, there is an almost nine-times-out-of-10 chance you'd say hanging with the fish here is pretty great.", availability: true, price: 6800)
 island_10 = Island.new(name: "Coral Getaway", location: "North Pole", slogan: "A quite escape. Bring a coat.", description: "Located in Hawaii, Kaua'i has emerald mountains, weeping waterfalls, red-rock canyons, jaw-dropping beaches, clear seas and big waves. Yay, you can surf here.", availability: true, price: 5500)
-island_11 = Island.new(name: "Sky Island", location: "The Moon", slogan: "Who needs earth gravity?", description: "Located in Italy, Capri is an enchanting and picturesque island made of limestone rock. A favorite with Roman emperors, artists, and writers. It's one of the Mediterranean's must-see places.", availability: true, price: 8800)
-island_12 = Island.new(name: "Crab Key", location: "Mars", slogan: "There is water here.  It's frozen", description: "Located in the middle of the sea, Kame House is a house on an island in the sea.  There are some palm trees. ", availability: true, price: 10000)
+island_11 = Island.new(name: "Sky Island", location: "The Florida Keys", slogan: "Who needs earth gravity?", description: "Located in Italy, Capri is an enchanting and picturesque island made of limestone rock. A favorite with Roman emperors, artists, and writers. It's one of the Mediterranean's must-see places.", availability: true, price: 8800)
+island_12 = Island.new(name: "Crab Key", location: "Italy", slogan: "Amazing and picturesque island", description: "Located in the middle of the sea, Kame House is a house on an island in the sea.  There are some palm trees. ", availability: true, price: 10000)
 
 puts "testing"
 island_1.user = user_1
@@ -90,7 +90,6 @@ island_12.remote_photo_url = url12
 
 
 island_1.save!
-puts "saving island 1"
 island_2.save!
 
 island_3.save!
@@ -102,7 +101,7 @@ island_5.save!
 island_6.save!
 
 island_7.save!
-puts "saving island 7"
+
 
 
 island_8.save!
