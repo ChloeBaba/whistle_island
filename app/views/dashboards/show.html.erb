@@ -14,8 +14,9 @@
     <div class="card-dashboard-bookings-islands">
     <div>
       <h2>My Bookings</h2>
+      <hr class="h-line" width="200" align="left">
     </div>
-    <div class=row>
+    <div class="row">
         <% @bookings.each do |booking| %>
           <div class="dashboard-card-product">
             <%= cl_image_tag booking.island.photo %>
@@ -30,7 +31,8 @@
     <div>
       <h2>My Islands</h2>
     </div>
-    <div class=row>
+    <hr class="h-line" width="200" align="left">
+    <div class="row">
       <% @islands.each do |island| %>
       <div class="dashboard-card-product">
           <%= cl_image_tag island.photo %>
