@@ -32,18 +32,18 @@ island_3.user = user_3
 island_4.user = user_4
 island_5.user = user_5
 island_6.user = user_6
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-seychelles.jpg'
-island_1.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
-island_2.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-fiji.jpg'
-island_3.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-kauai.jpg'
-island_4.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-capri.jpg'
-island_5.remote_photo_url = url
-url = 'https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg'
-island_6.remote_photo_url = url
+url1 = 'https://www.planetware.com/photos-large/SEY/best-islands-seychelles.jpg'
+island_1.remote_photo_url = url1
+url2 = 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
+island_2.remote_photo_url = url2
+url3 = 'https://www.planetware.com/photos-large/SEY/best-islands-fiji.jpg'
+island_3.remote_photo_url = url3
+url4 = 'https://www.planetware.com/photos-large/SEY/best-islands-kauai.jpg'
+island_4.remote_photo_url = url4
+url5 = 'https://www.planetware.com/photos-large/SEY/best-islands-capri.jpg'
+island_5.remote_photo_url = url5
+url6 = 'https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg'
+island_6.remote_photo_url = url6
 island_1.save!
 island_2.save!
 island_3.save!
