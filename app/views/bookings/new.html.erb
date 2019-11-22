@@ -1,4 +1,26 @@
-<div class="booking-container">
+<div class="booking-form-container">
+  <div class="booking-form-title">
+    <h3><%= current_user.name %>, book the beautiful <%= @island.name %>!</h3>
+  </div>
+  <div class="booking-form-details">
+    <%= simple_form_for [@island, @booking] do |f| %>
+      <%= f.input :start_date, label: "Arrival", as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, label: "Departure", as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.submit "Book!", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<%= link_to "ISLAND OWNER PROFILE", profile_path(@island_owner)  %>
+
+
+
+
+
+
+
+
+
+<!-- <div class="booking-container">
   <div class="row justify-content-center">
     <div class="col-12 col-med-8">
       <h1>Book the beautiful <%= @island.name %></h1>
@@ -11,5 +33,5 @@
   </div>
 </div>
 <%= link_to "ISLAND OWNER PROFILE", profile_path(@island_owner)  %>
-
+ -->
 
