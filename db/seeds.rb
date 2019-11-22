@@ -19,12 +19,12 @@ user_10 = User.create!(name: "Boudica", email: "user_10@example.com", password: 
 
 puts 'Creating islands...'
 
-island_1 = Island.new(name: "Seychelles", location: "Seychelles", description: "Located in the Indian Ocean, Seychelles islands is characterised by majestic seascapes, unparalleled beauty and temperate weather.", availability: true, price: 5400)
-island_2 = Island.new(name: "Santorini", location: "Santorini", description: "Located in Greece in the heart of the vast Aegean sea, Santorini boasts a unique landscape! The island's beauty speaks for itself. Come rent it out.", availability: true, price: 2800)
-island_3 = Island.new(name: "Fiji", location: "Fiji", description: "Located in the South Pacific, If someone asks, 'Are you happy?' What would you say? Well, if you rent Fiji, there is an almost nine-times-out-of-10 chance you'd say hanging with the fish here is pretty great.", availability: true, price: 9700)
-island_4 = Island.new(name: "Kauaʻi", location: "Kauaʻi", description: "Located in Hawaii, Kaua'i has emerald mountains, weeping waterfalls, red-rock canyons, jaw-dropping beaches, clear seas and big waves. Yay, you can surf here.", availability: true, price: 3900)
-island_5 = Island.new(name: "Capri", location: "Capri", description: "Located in Italy, Capri is an enchanting and picturesque island made of limestone rock. A favorite with Roman emperors, artists, and writers. It's one of the Mediterranean's must-see places.", availability: true, price: 7600)
-island_6 = Island.new(name: "Kame House", location: "Solomon Islands", description: "Located in the middle of the sea, Kame House is a house on an island in the sea.  There are some palm trees. ", availability: true, price: 10000)
+island_1 = Island.new(name: "Seychelles", location: "Seychelles", slogan: "Majestic seascapes, unparalleled beauty",  description: "Located in the Indian Ocean, Seychelles islands is characterised by majestic seascapes, unparalleled beauty and temperate weather.", availability: true, price: 5400)
+island_2 = Island.new(name: "Santorini", location: "Santorini", slogan: "Amazing red and black volcanic beaches", description: "Located in Greece in the heart of the vast Aegean sea, Santorini boasts a unique landscape! The island's beauty speaks for itself. Come rent it out.", availability: true, price: 2800)
+island_3 = Island.new(name: "Fiji", location: "Fiji", slogan: "Spectacular coral reefs", description: "Located in the South Pacific, If someone asks, 'Are you happy?' What would you say? Well, if you rent Fiji, there is an almost nine-times-out-of-10 chance you'd say hanging with the fish here is pretty great.", availability: true, price: 9700)
+island_4 = Island.new(name: "Kauaʻi", location: "Kauaʻi", slogan: "Emerald mountains, weeping waterfalls", description: "Located in Hawaii, Kaua'i has emerald mountains, weeping waterfalls, red-rock canyons, jaw-dropping beaches, clear seas and big waves. Yay, you can surf here.", availability: true, price: 3900)
+island_5 = Island.new(name: "Capri", location: "Capri", slogan: "Enchanting and picturesque island", description: "Located in Italy, Capri is an enchanting and picturesque island made of limestone rock. A favorite with Roman emperors, artists, and writers. It's one of the Mediterranean's must-see places.", availability: true, price: 7600)
+island_6 = Island.new(name: "Kame House", location: "Solomon Islands", slogan: "Nice place to stay", description: "Located in the middle of the sea, Kame House is a house on an island in the sea.  There are some palm trees. ", availability: true, price: 10000)
 
 island_1.user = user_1
 island_2.user = user_2
@@ -32,18 +32,18 @@ island_3.user = user_3
 island_4.user = user_4
 island_5.user = user_5
 island_6.user = user_6
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-seychelles.jpg'
-island_1.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
-island_2.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-fiji.jpg'
-island_3.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-kauai.jpg'
-island_4.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-capri.jpg'
-island_5.remote_photo_url = url
-url = 'https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg'
-island_6.remote_photo_url = url
+url1 = 'https://www.planetware.com/photos-large/SEY/best-islands-seychelles.jpg'
+island_1.remote_photo_url = url1
+url2 = 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
+island_2.remote_photo_url = url2
+url3 = 'https://www.planetware.com/photos-large/SEY/best-islands-fiji.jpg'
+island_3.remote_photo_url = url3
+url4 = 'https://www.planetware.com/photos-large/SEY/best-islands-kauai.jpg'
+island_4.remote_photo_url = url4
+url5 = 'https://www.planetware.com/photos-large/SEY/best-islands-capri.jpg'
+island_5.remote_photo_url = url5
+url6 = 'https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg'
+island_6.remote_photo_url = url6
 island_1.save!
 island_2.save!
 island_3.save!
