@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def show
-    @email = current_user.email
-    authorize current_user
+    @user = User.find(params[:id])
+    @email = @user.email
+    authorize @user
   end
 
   def edit
