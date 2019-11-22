@@ -45,8 +45,8 @@
       </div>
     </div>
     <% if current_user == @booking.user %>
-      <%= link_to "Edit your booking", edit_booking_path(@booking), class: 'btn btn-primary' %>
-      <%= link_to "Cancel your booking", booking_path(@booking), class: 'btn btn-primary',
+      <%= link_to "Edit", edit_booking_path(@booking), class: 'btn btn-primary' %>
+      <%= link_to "Cancel", booking_path(@booking), class: 'btn btn-primary',
           method: :delete,
           data: { confirm: "Are you sure?" } %>
       <% elsif current_user == @booking.island.user %>
@@ -54,6 +54,7 @@
           method: :delete,
           data: { confirm: "Are you sure?" } %>
       <% end %>
+        <%= link_to "Dashboard", dashboard_path, class: 'btn btn-info' %>
     </div>
 
 
