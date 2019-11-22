@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
 
   def new
     @island = Island.find(params[:island_id])
+    @island_ownewr = @island.user
     @booking = Booking.new
     authorize @booking
   end
