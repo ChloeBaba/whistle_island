@@ -11,9 +11,12 @@
 <div class="cards">
   <% @islands.each do |island| %>
       <div class="card-island">
+        <% link_to island_path(island) %>
         <%= cl_image_tag island.photo %>
         <div class="card-island-infos">
           <div>
+            <h2><%= island.name %></h2>
+            <p><%= island.description %></p>
             <h2><%= link_to island.name, island_path(island) %></h2>
             <p><%= island.location%> - <em><%= island.slogan%></em>  </p>
           </div>

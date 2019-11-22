@@ -1,10 +1,10 @@
 <div class="container">
-  <%= simple_form_for @island do |f| %>
-        <%= f.input :name %>
-        <%= f.input :location %>
-        <%= f.input :description %>
-        <%= f.input :price %>
-        <%= f.input :availability %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-        <% end %>
+  <%= simple_form_for [@island] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :availability %>
+  <%= f.submit "Update Island", class: 'btn btn-primary' %>
+  <% end %>
 </div>

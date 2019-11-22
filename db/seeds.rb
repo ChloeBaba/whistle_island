@@ -32,56 +32,86 @@ island_10 = Island.new(name: "Coral Getaway", location: "North Pole", slogan: "A
 island_11 = Island.new(name: "Sky Island", location: "The Moon", slogan: "Who needs earth gravity?", description: "Located in Italy, Capri is an enchanting and picturesque island made of limestone rock. A favorite with Roman emperors, artists, and writers. It's one of the Mediterranean's must-see places.", availability: true, price: 8800)
 island_12 = Island.new(name: "Crab Key", location: "Mars", slogan: "There is water here.  It's frozen", description: "Located in the middle of the sea, Kame House is a house on an island in the sea.  There are some palm trees. ", availability: true, price: 10000)
 
+puts "testing"
 island_1.user = user_1
-island_2.user = user_2
-island_3.user = user_3
-island_4.user = user_4
-island_5.user = user_5
-island_6.user = user_6
-island_7.user = user_1
-island_8.user = user_1
-island_9.user = user_2
-island_10.user = user_3
-island_11.user = user_4
-island_12.user = user_5
+puts "user_1"
 
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-seychelles.jpg'
-island_1.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
-island_2.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-fiji.jpg'
-island_3.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-kauai.jpg'
-island_4.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-capri.jpg'
-island_5.remote_photo_url = url
-url = 'https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg'
-island_6.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-seychelles.jpg'
-island_7.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
-island_8.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-fiji.jpg'
-island_9.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-kauai.jpg'
-island_10.remote_photo_url = url
-url = 'https://www.planetware.com/photos-large/SEY/best-islands-capri.jpg'
-island_11.remote_photo_url = url
-url = 'https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg'
-island_12.remote_photo_url = url
+island_2.user = user_2
+puts "user_2"
+island_3.user = user_3
+puts "user_3"
+island_4.user = user_4
+puts "user_4"
+island_5.user = user_5
+puts "user_5"
+island_6.user = user_6
+puts "user_6"
+island_7.user = user_1
+puts "user_1"
+
+island_8.user = user_2
+puts "user_2"
+island_9.user = user_3
+puts "user_3"
+island_10.user = user_4
+puts "user_4"
+island_11.user = user_5
+puts "user_5"
+island_12.user = user_6
+
+
+
+
+
+url1 = 'https://www.planetware.com/photos-large/SEY/best-islands-seychelles.jpg'
+island_1.remote_photo_url = url1
+url2 = 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
+island_2.remote_photo_url = url2
+url3 = 'https://www.planetware.com/photos-large/SEY/best-islands-fiji.jpg'
+island_3.remote_photo_url = url3
+url4 = 'https://www.planetware.com/photos-large/SEY/best-islands-kauai.jpg'
+island_4.remote_photo_url = url4
+url5 = 'https://www.planetware.com/photos-large/SEY/best-islands-capri.jpg'
+island_5.remote_photo_url = url5
+url6 = 'https://ae01.alicdn.com/kf/HTB1v0bAb6ihSKJjy0Fiq6AuiFXa6.jpg'
+island_6.remote_photo_url = url6
+url7= 'https://www.planetware.com/photos-large/SEY/best-islands-santorini.jpg'
+island_7.remote_photo_url = url7
+url8 = 'https://media.expedia.com/media/content/shared/images/travelguides/Bay-of-Islands-6024124-smallTabletRetina.jpg'
+island_8.remote_photo_url = url8
+url9 = 'https://www.elitereaders.com/wp-content/uploads/2015/10/naturally-shaped-islands-5.jpg'
+island_9.remote_photo_url = url9
+url10 = 'https://www.privateislandsonline.com/uploads/586834eee7fe6.jpg'
+island_10.remote_photo_url = url10
+url11 = 'https://www.myoutislands.com/public_docs/destination/content/exumas551-orig.jpg'
+island_11.remote_photo_url = url11
+url12 = 'http://true-beachfront.com/media/cache/f5/2c/f52cdbec9f5b98d9c1b7acad74e1220d.jpg'
+island_12.remote_photo_url = url12
+
 
 island_1.save!
+puts "saving island 1"
 island_2.save!
+
 island_3.save!
+
 island_4.save!
+
 island_5.save!
+
 island_6.save!
+
 island_7.save!
+puts "saving island 7"
+
+
 island_8.save!
 island_9.save!
 island_10.save!
 island_11.save!
 island_12.save!
+
+
 
 puts 'Creating bookings'
 booking_1 = Booking.new(start_date: Date.new(2019,12,6), end_date: Date.new(2019,12,7), total_price: 1)
