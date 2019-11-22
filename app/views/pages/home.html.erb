@@ -1,7 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80);">
   <div class="container">
-    <h1>Your holidays start <strong>now</strong>.</h1>
-     <%= link_to "Discover", islands_path, class: "discover-buton btn-flat" %>
+    <h1>Your holidays start <%= link_to "now", islands_path, class: "now-button" %>.</h1>
     <div class ="search-control form-group">
   <%= form_tag islands_path, method: :get do %>
     <%= text_field_tag :query,
