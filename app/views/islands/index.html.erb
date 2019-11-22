@@ -19,6 +19,7 @@
             <div class="card-island-infos">
               <div>
                 <h2><%= link_to island.name, island_path(island) %></h2>
+                <p><%= island.location%> - <em><%= island.slogan%></em>  </p>
               </div>
               <h2 class="price"><%= island.price %>$/Night</h2>
             </div>
