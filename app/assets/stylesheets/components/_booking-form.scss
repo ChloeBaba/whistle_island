@@ -1,0 +1,31 @@
+.booking-form-container {
+  width: 500px;
+  margin: 0 auto;
+  .booking-form-title {
+    text-align: center;
+    margin: 80px 0;
+  }
+  .booking-form-details {
+    display: flex;
+    justify-content: space-around;
+    .booking-form-date {
+      width: 20%;
+      height: 100%;
+    }
+    .booking-form-desc {
+      width: 40%;
+      .booking-form-owner-info {
+        text-align: center;
+      }
+      .booking-form-island-desc {
+        .small-island-image {
+          width: 100%;
+          height: 10%;
+        }
+      }
+      .booking-form-price {
+
+      }
+    }
+  }
+}
