@@ -12,10 +12,11 @@
           <% else %>
             Not available
           <% end %>
-        <div class ="card-options">
-          <%= link_to "Book", new_island_booking_path(@island), class: 'btn btn-primary' %>
-        </div>
-
+          <% if current_user != @island.user %>
+            <div class ="card-options">
+              <%= link_to "Book", new_island_booking_path(@island), class: 'btn btn-primary' %>
+            </div>
+          <% end %>
           <!-- If I am the owner, display the link-->
           <!-- otherwise, don't -->
           <% if current_user == @island.user %>

@@ -1,7 +1,9 @@
-  <div class="container">
+<div class="container">
+  <div class="form-island">
     <%= simple_form_for [@island] do |f| %>
     <%= f.input :name %>
     <%= f.input :location %>
+    <%= f.input :slogan %>
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :availability %>
@@ -10,5 +12,6 @@
     <%= f.submit "Save Island", class: "btn btn-primary" %>
   <% end %>
   </div>
+</div>
 
 
