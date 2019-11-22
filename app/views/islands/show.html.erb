@@ -12,10 +12,16 @@
           <% else %>
             Not available
           <% end %>
-        <div class ="card-options">
-          <%= link_to "Book", new_island_booking_path(@island), class: 'btn btn-primary' %>
-        </div>
-
+          <% if current_user != @island.user %>
+          <%= simple_form_for [@island, @booking] do |f| %>
+          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.submit "Book!", class: "btn btn-primary" %>
+          <% end %>
+            <div class ="card-options">
+              <%= link_to "Book", new_island_booking_path(@island), class: 'btn btn-primary' %>
+            </div>
+          <% end %>
           <!-- If I am the owner, display the link-->
           <!-- otherwise, don't -->
           <% if current_user == @island.user %>

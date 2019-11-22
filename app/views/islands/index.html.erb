@@ -6,7 +6,7 @@
     class: "form-control",
     placeholder: "Find an island"
     %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= submit_tag "Search", class: "btn btn-primary form" %>
   <% end %>
 </div>
 
@@ -19,7 +19,6 @@
             <div class="card-island-infos">
               <div>
                 <h2><%= link_to island.name, island_path(island) %></h2>
-                <p><%= island.description.first(50)... %></p>
               </div>
               <h2 class="price"><%= island.price %>$/Night</h2>
             </div>

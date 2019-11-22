@@ -1,12 +1,22 @@
-<div class="booking-container">
+<div class="booking-form-container">
   <div class="row justify-content-center">
     <div class="col-12 col-med-8">
-      <h1>Book the beautiful <%= @island.name %></h1>
-      <%= simple_form_for [@island, @booking] do |f| %>
-        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.submit "Book!", class: "btn btn-primary" %>
-      <% end %>
+      <div class="booking-form-title">
+        <h3><%= current_user.name %>, book the beautiful <%= @island.name %>!</h3>
+      </div>
+      <div class="booking-form-new">
+        <%= simple_form_for [@island, @booking] do |f| %>
+          <%= f.input :start_date, label: "Arrival", as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :end_date, label: "Departure", as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.submit "Book!", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <div style="margin-top: 25px; margin-bottom:25px">
+        <hr>
+      </div>
+      <div class="booking-show-host-info">
+        <p>Hosted by <%= link_to @island.user.name, profile_path(@island.user) %></p>
+      </div>
     </div>
   </div>
 </div>
