@@ -31,6 +31,18 @@
       <h2>My Islands</h2>
     </div>
     <div class=row>
+      <% @islands.each do |island| %>
+      <div class="dashboard-card-product">
+          <%= cl_image_tag island.photo %>
+          <div class="card-product-infos">
+              <h4> <%= island.name %> </h4>
+              <p> <%= island.description.first(20)... %> </p>
+              <p><%= island.price %> ₽/day </p>
     </div>
   </div>
+  <% end %>
 </div>
+</div>
+</div>
+
+
