@@ -14,9 +14,12 @@
       <div style="margin-top: 25px; margin-bottom:25px">
         <hr>
       </div>
+      <div class="booking-show-host-info">
+        <p>Hosted by <%= link_to @island.user.name, profile_path(@island.user) %></p>
+        <p>E-mail: <%= @island.user.email %></p>
+      </div>
     </div>
   </div>
 </div>
-<%= link_to "ISLAND OWNER PROFILE", profile_path(@island_owner)  %>
 
 
