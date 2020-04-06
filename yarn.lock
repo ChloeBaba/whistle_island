@@ -706,7 +706,7 @@
   dependencies:
     "@mapbox/geojson-area" "0.2.2"
     concat-stream "~1.6.0"
-    minimist "1.2.0"
+    minimist "1.2.3"
     sharkdown "^0.1.0"
 
 "@mapbox/geojson-types@^1.0.2":
